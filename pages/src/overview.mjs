@@ -387,6 +387,10 @@ function buildLayout() {
                 value: x => fmtWkg(x.stats && x.stats.power.smooth[1200], x.athlete),
                 key: `W/kg <small>(${shortDuration(1200)})</small>`,
             }, {
+                id: 'pwr-smooth-1200-95-wkg',
+                value: x => fmtWkg(x.stats && (x.stats.power.smooth[1200] * 0.95), x.athlete),
+                key: 'W/kg <small>(20m 95%)</small>',
+            }, {
                 id: 'pwr-peak-5',
                 value: x => H.number(x.stats && x.stats.power.peaks[5].avg),
                 key: `Peak Power <small>(${shortDuration(5)})</small>`,
