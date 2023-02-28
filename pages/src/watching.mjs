@@ -121,6 +121,12 @@ const groupSpecs = {
             key: 'Current',
             unit: 'w/kg',
         }, {
+            id: 'pwr-avg-wkg',
+            value: x => humanWkg(x.stats && x.stats.power.avg, x.athlete),
+            label: 'avg',
+            key: 'Avg',
+            unit: 'w/kg',
+        }, {
             id: 'pwr-np',
             value: x => H.number(x.stats && x.stats.power.np),
             label: 'np',
